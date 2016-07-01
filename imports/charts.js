@@ -1,8 +1,10 @@
 // Flot Charts sample data for SB Admin template
 
 // Flot Line Chart with Tooltips
-$(document).ready(function() {
-    console.log("document ready");
+Template.chartsHtml.rendered = function() {
+    // call dashboard to get the morris charts
+    Template.dashboard.rendered()
+    
     var offset = 0;
     plot();
 
@@ -49,10 +51,7 @@ $(document).ready(function() {
             }],
             options);
     }
-});
 
-// Flot Pie Chart with Tooltips
-$(function() {
 
     var data = [{
         label: "Series 0",
@@ -88,10 +87,6 @@ $(function() {
         }
     });
 
-});
-
-// Flot Line Charts - Multiple Axes - With Data
-$(function() {
     var oilprices = [
         [1167692400000, 61.05],
         [1167778800000, 58.32],
@@ -1099,11 +1094,6 @@ $(function() {
     $("button").click(function() {
         doPlot($(this).text());
     });
-});
-
-// Flot Chart Dynamic Chart
-
-$(function() {
 
     var container = $("#flot-moving-line-chart");
 
@@ -1199,12 +1189,6 @@ $(function() {
         plot.draw();
     }, 40);
 
-});
-
-// Flot Chart Bar Graph
-
-$(function() {
-
     var barOptions = {
         series: {
             bars: {
@@ -1241,4 +1225,4 @@ $(function() {
     };
     $.plot($("#flot-bar-chart"), [barData], barOptions);
 
-});
+};

@@ -1,3 +1,6 @@
 import 'raphael'
 import 'morris.js/morris.js'
+import 'jquery-flot'
+import 'jquery-flot/jquery.flot.time.js'
 import '/imports/dashboard.js'
+import '/imports/charts.js'

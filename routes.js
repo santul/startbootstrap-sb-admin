@@ -3,3 +3,4 @@ Router.route('/',  function() {
 })
 
 Router.route('/blank-page')
+Router.route('/charts.html')
